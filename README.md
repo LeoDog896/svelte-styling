@@ -1,38 +1,43 @@
-# create-svelte
+# svelte-styling
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+ridiculously simple CSS variables in svelte
 
-## Creating a project
+Demo: https://leodog896.github.io/svelte-styling
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Variables
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+```html
+<script>
+  import { variables } from "svelte-styling"
+  let size = 1
+  let backgroundColor = "white";
+</script>
+<input type="number" bind:value={size} placeholder="Enter Size">
+<p use:variables={{ size }}></p>
 
-# create a new project in my-app
-npm create svelte@latest my-app
+<input type="number" bind:value={backgroundCOlor} placeholder="Enter Background Color">
+<svelte:body use:variables={{ color: backgroundColor }}>
+
+<style>
+  :global(body) {
+    --color: white;
+    background-color: var(--color);
+  }
+
+  p {
+    --size: 1; /* default SSR value! */
+    font-size: calc(var(--size) * 2rem);
+  }
+</style>
 ```
 
-## Developing
+## Styles
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```html
+<script>
+  import { styles } from "svelte-styling"
+  let border = "1px black solid"
+</script>
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+<input use:styles={{ border }} bind:value={border} placeholder="Enter Border">
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
