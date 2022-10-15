@@ -1,6 +1,6 @@
 # svelte-styling
 
-ridiculously simple CSS variables in svelte
+*ridiculously* simple CSS variables in svelte
 
 Demo: https://leodog896.github.io/svelte-styling
 
