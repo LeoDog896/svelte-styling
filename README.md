@@ -1,7 +1,6 @@
 # svelte-styling
 
 [![npm](https://img.shields.io/npm/v/svelte-styling)](https://npmjs.com/package/svelte-styling)
-[![GitHub](https://img.shields.io/badge/MIT)](https://github.com/LeoDog896/svelte-styling/blob/master/LICENSE)
 [![demo](https://img.shields.io/badge/demo-live-brightgreen)](https://leodog896.github.io/svelte-styling/demo)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/svelte-styling)
 ![npm](https://img.shields.io/npm/dt/svelte-styling)
