@@ -1,6 +1,18 @@
 {
 	"name": "svelte-styling",
+  "description": "css and variable actions within svelte",
+  "license": "MIT",
 	"version": "0.0.1",
+  "homepage": "https://leodog896.github.io/svelte-styling",
+  "repository": {
+    "url": "https://github.com/LeoDog896/svelte-styling"
+  },
+  "author": {
+    "name": "Tristan F.",
+    "email": "leodog896@gmail.com",
+    "url": "https://github.com/LeoDog896"
+  },
+  "keywords": ["svelte", "css"],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
